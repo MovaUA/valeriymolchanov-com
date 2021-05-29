@@ -1,9 +1,5 @@
 name: Publish to GitHub Pages
 on:
-  # TODO: remove pull_request
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
@@ -23,10 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: pwd
       - run: npm install
       - run: npm run nx -- build --prod --output-path dist
-      - run: ls -la
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
