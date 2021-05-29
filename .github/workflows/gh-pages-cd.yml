@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - src/mova
-      - .gihub/workflows/gh-pages-cd.yml
+      - .github/workflows/gh-pages-cd.yml
 jobs:
   github-pages-cd:
     name: Build and Publish to GitHub Pages
