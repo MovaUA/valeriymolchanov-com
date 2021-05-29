@@ -1,0 +1,16 @@
+name: build
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - src/mova/**
+      - .github/workflows/build-ci.yml
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
