@@ -19,6 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - run: echo "${EVENT}"
+        env:
+          EVENT: ${{ toJSON(github.event) }}
       - run: npm install
       - run: npm run nx build --prod
       - run: npm run nx lint
