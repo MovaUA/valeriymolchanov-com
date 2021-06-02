@@ -47,8 +47,14 @@
             "polyfills": "apps/mova/src/polyfills.ts",
             "tsConfig": "apps/mova/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/mova/src/favicon.ico", "apps/mova/src/assets"],
-            "styles": ["apps/mova/src/styles.scss"],
+            "assets": [
+              "apps/mova/src/favicon.ico",
+              "apps/mova/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/mova/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -113,7 +119,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/mova"],
+          "outputs": [
+            "coverage/apps/mova"
+          ],
           "options": {
             "jestConfig": "apps/mova/jest.config.js",
             "passWithNoTests": true
@@ -142,7 +150,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/mova-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/mova-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
