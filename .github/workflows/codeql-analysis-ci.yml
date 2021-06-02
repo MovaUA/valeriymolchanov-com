@@ -20,6 +20,7 @@ on:
     branches:
       - main
   schedule:
+    # At 19:42 on Monday
     - cron: "42 19 * * 1"
 
 jobs:
