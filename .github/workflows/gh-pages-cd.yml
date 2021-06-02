@@ -1,4 +1,4 @@
-name: Publish to GitHub Pages
+name: GitHub Pages
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
     paths:
       - src/mova/**
       - .github/workflows/gh-pages-cd.yml
+  workflow_dispatch:
 jobs:
   github-pages-cd:
     name: Build and Publish to GitHub Pages
