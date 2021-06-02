@@ -55,7 +55,7 @@
     "@nrwl/cli": "12.3.5",
     "@nrwl/cypress": "12.3.6",
     "@nrwl/eslint-plugin-nx": "12.3.5",
-    "@nrwl/jest": "12.3.5",
+    "@nrwl/jest": "12.3.6",
     "@nrwl/linter": "12.3.5",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/tao": "12.3.5",
