@@ -1,11 +1,9 @@
-name: Build, lint, test
+name: Build
 on:
   pull_request:
     branches:
       - main
-    paths:
-      - src/mova/**
-      - .github/workflows/build-ci.yml
+      - features/*
   workflow_dispatch:
 jobs:
   build:
@@ -18,9 +16,20 @@ jobs:
     env:
       NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - run: npm install
-      - run: npm run nx build --prod
-      - run: npm run nx lint
-      - run: npm run nx test
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Nodejs
+        uses: actions/setup-node@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run nx build --prod
+
+      - name: Lint
+        run: npm run nx lint
+
+      - name: Test
+        run: npm run nx test
