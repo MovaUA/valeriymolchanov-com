@@ -39,6 +39,7 @@
     "@angular/platform-browser": "12.0.3",
     "@angular/platform-browser-dynamic": "12.0.3",
     "@angular/router": "12.0.3",
+    "@ngrx/store": "^12.0.0",
     "@nrwl/angular": "12.3.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -74,6 +75,7 @@
     "prettier": "2.2.1",
     "ts-jest": "26.5.5",
     "ts-node": "~9.1.1",
-    "typescript": "~4.2.4"
+    "typescript": "~4.2.4",
+    "eslint-plugin-ngrx": "^1.0.0"
   }
 }
