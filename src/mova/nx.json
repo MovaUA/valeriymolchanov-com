@@ -1,0 +1,40 @@
+{
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "mova",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "ZTE4MzQwNDQtOTZhNC00OWQ3LWJkM2UtNTM4YjZiMzA2ZWY3fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "hp": {
+      "tags": []
+    },
+    "hp-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "hp"
+      ]
+    }
+  }
+}
