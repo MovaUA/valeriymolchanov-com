@@ -6,17 +6,18 @@
       "files": ["*.ts"],
       "extends": [
         "plugin:@nrwl/nx/angular",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:ngrx/recommended"
       ],
       "parserOptions": {
-        "project": ["apps/mova/tsconfig.*?.json"]
+        "project": "./tsconfig.*.json"
       },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
           {
             "type": "attribute",
-            "prefix": "mova",
+            "prefix": "hp",
             "style": "camelCase"
           }
         ],
@@ -24,11 +25,12 @@
           "error",
           {
             "type": "element",
-            "prefix": "mova",
+            "prefix": "hp",
             "style": "kebab-case"
           }
         ]
-      }
+      },
+      "plugins": ["ngrx"]
     },
     {
       "files": ["*.html"],

@@ -20,19 +20,20 @@
           "test",
           "e2e"
         ],
+        "accessToken": "ZTE4MzQwNDQtOTZhNC00OWQ3LWJkM2UtNTM4YjZiMzA2ZWY3fHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
   "projects": {
-    "mova": {
+    "hp": {
       "tags": []
     },
-    "mova-e2e": {
+    "hp-e2e": {
       "tags": [],
       "implicitDependencies": [
-        "mova"
+        "hp"
       ]
     }
   }

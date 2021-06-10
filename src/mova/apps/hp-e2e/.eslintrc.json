@@ -4,9 +4,6 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "parserOptions": {
-        "project": "apps/mova-e2e/tsconfig.*?.json"
-      },
       "rules": {}
     },
     {

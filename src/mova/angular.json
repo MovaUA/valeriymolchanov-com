@@ -3,7 +3,7 @@
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
-  "defaultProject": "mova",
+  "defaultProject": "hp",
   "schematics": {
     "@nrwl/angular": {
       "application": {
@@ -32,28 +32,31 @@
     }
   },
   "projects": {
-    "mova": {
+    "hp": {
       "projectType": "application",
-      "root": "apps/mova",
-      "sourceRoot": "apps/mova/src",
+      "root": "apps/hp",
+      "sourceRoot": "apps/hp/src",
       "prefix": "mova",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
-            "outputPath": "dist/apps/mova",
-            "index": "apps/mova/src/index.html",
-            "main": "apps/mova/src/main.ts",
-            "polyfills": "apps/mova/src/polyfills.ts",
-            "tsConfig": "apps/mova/tsconfig.app.json",
+            "outputPath": "dist/apps/hp",
+            "index": "apps/hp/src/index.html",
+            "main": "apps/hp/src/main.ts",
+            "polyfills": "apps/hp/src/polyfills.ts",
+            "tsConfig": "apps/hp/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "apps/mova/src/favicon.ico",
-              "apps/mova/src/assets"
+              "apps/hp/src/favicon.ico",
+              "apps/hp/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "apps/mova/src/styles.scss"
+              "apps/hp/src/styles.scss"
             ],
             "scripts": []
           },
@@ -73,8 +76,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "apps/mova/src/environments/environment.ts",
-                  "with": "apps/mova/src/environments/environment.prod.ts"
+                  "replace": "apps/hp/src/environments/environment.ts",
+                  "with": "apps/hp/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -94,10 +97,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mova:build:production"
+              "browserTarget": "hp:build:production"
             },
             "development": {
-              "browserTarget": "mova:build:development"
+              "browserTarget": "hp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,45 +108,45 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mova:build"
+            "browserTarget": "hp:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/mova/src/**/*.ts",
-              "apps/mova/src/**/*.html"
+              "apps/hp/src/**/*.ts",
+              "apps/hp/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/apps/mova"
+            "coverage/apps/hp"
           ],
           "options": {
-            "jestConfig": "apps/mova/jest.config.js",
+            "jestConfig": "apps/hp/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "mova-e2e": {
-      "root": "apps/mova-e2e",
-      "sourceRoot": "apps/mova-e2e/src",
+    "hp-e2e": {
+      "root": "apps/hp-e2e",
+      "sourceRoot": "apps/hp-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/mova-e2e/cypress.json",
-            "tsConfig": "apps/mova-e2e/tsconfig.e2e.json",
-            "devServerTarget": "mova:serve:development"
+            "cypressConfig": "apps/hp-e2e/cypress.json",
+            "tsConfig": "apps/hp-e2e/tsconfig.e2e.json",
+            "devServerTarget": "hp:serve:development"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mova:serve:production"
+              "devServerTarget": "hp:serve:production"
             }
           }
         },
@@ -151,7 +154,7 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/mova-e2e/**/*.{js,ts}"
+              "apps/hp-e2e/**/*.{js,ts}"
             ]
           }
         }
