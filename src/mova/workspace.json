@@ -1,0 +1,149 @@
+{
+  "version": 2,
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "hp",
+  "generators": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "projects": {
+    "hp": {
+      "projectType": "application",
+      "root": "apps/hp",
+      "sourceRoot": "apps/hp/src",
+      "prefix": "mova",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/hp",
+            "index": "apps/hp/src/index.html",
+            "main": "apps/hp/src/main.ts",
+            "polyfills": "apps/hp/src/polyfills.ts",
+            "tsConfig": "apps/hp/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": ["apps/hp/src/favicon.ico", "apps/hp/src/assets"],
+            "styles": ["apps/hp/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/hp/src/environments/environment.ts",
+                  "with": "apps/hp/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "hp:build:production"
+            },
+            "development": {
+              "browserTarget": "hp:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "hp:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/hp/src/**/*.ts", "apps/hp/src/**/*.html"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/hp"],
+          "options": {
+            "jestConfig": "apps/hp/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "hp-e2e": {
+      "root": "apps/hp-e2e",
+      "sourceRoot": "apps/hp-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/hp-e2e/cypress.json",
+            "tsConfig": "apps/hp-e2e/tsconfig.e2e.json",
+            "devServerTarget": "hp:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "hp:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/hp-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  }
+}
