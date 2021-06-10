@@ -40,7 +40,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/hp",
             "index": "apps/hp/src/index.html",
@@ -48,8 +50,13 @@
             "polyfills": "apps/hp/src/polyfills.ts",
             "tsConfig": "apps/hp/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/hp/src/favicon.ico", "apps/hp/src/assets"],
-            "styles": ["apps/hp/src/styles.scss"],
+            "assets": [
+              "apps/hp/src/favicon.ico",
+              "apps/hp/src/assets"
+            ],
+            "styles": [
+              "apps/hp/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -106,12 +113,17 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/hp/src/**/*.ts", "apps/hp/src/**/*.html"]
+            "lintFilePatterns": [
+              "apps/hp/src/**/*.ts",
+              "apps/hp/src/**/*.html"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/hp"],
+          "outputs": [
+            "coverage/apps/hp"
+          ],
           "options": {
             "jestConfig": "apps/hp/jest.config.js",
             "passWithNoTests": true
@@ -140,7 +152,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/hp-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/hp-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
