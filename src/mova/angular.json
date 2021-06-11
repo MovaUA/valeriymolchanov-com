@@ -36,7 +36,7 @@
       "projectType": "application",
       "root": "apps/hp",
       "sourceRoot": "apps/hp/src",
-      "prefix": "mova",
+      "prefix": "hp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
