@@ -16,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [AppComponent, NavComponent],
@@ -36,6 +37,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
