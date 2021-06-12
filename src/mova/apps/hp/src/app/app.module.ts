@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { NavModule } from './features/nav/nav.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { CoreModule } from './core/core.module';
       logOnly: environment.production,
     }),
     CoreModule,
+    NavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
