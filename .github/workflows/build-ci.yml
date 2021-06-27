@@ -25,6 +25,12 @@ jobs:
       - name: Setup Nodejs
         uses: actions/setup-node@v2
 
+      - name: Print Node.js version
+        run: node -v
+
+      - name: Print npm version
+        run: npm -v
+
       - name: Install dependencies
         run: npm ci
 
