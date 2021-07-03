@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Resume } from './resume';
 import { map, shareReplay } from 'rxjs/operators';
-import { parse } from 'yaml';
+import { load as yamlLoad } from 'js-yaml';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +18,7 @@ export class ResumeService {
         responseType: 'text',
       })
       .pipe(
-        map((text) => parse(text) as Resume),
+        map((text) => yamlLoad(text) as Resume),
         shareReplay({
           bufferSize: 1,
           refCount: true,

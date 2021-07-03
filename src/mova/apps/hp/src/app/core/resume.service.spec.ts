@@ -7,7 +7,7 @@ import { TestBed } from '@angular/core/testing';
 import { ResumeService } from './resume.service';
 
 describe('ResumeService', () => {
-  let httpTestingController: HttpTestingController;
+  let http: HttpTestingController;
   let service: ResumeService;
 
   beforeEach(() => {
@@ -15,12 +15,12 @@ describe('ResumeService', () => {
       imports: [HttpClientTestingModule],
     });
 
-    httpTestingController = TestBed.get(HttpTestingController);
+    http = TestBed.get(HttpTestingController);
     service = TestBed.inject(ResumeService);
   });
 
   afterEach(() => {
-    httpTestingController.verify();
+    http.verify();
   });
 
   it('should be created', () => {
@@ -38,7 +38,12 @@ surname: Two
       expect(resume.surname).toEqual('Two');
     });
 
-    const req = httpTestingController.expectOne('assets/resume.yaml');
+    service.get().subscribe((resume) => {
+      expect(resume.name).toEqual('One');
+      expect(resume.surname).toEqual('Two');
+    });
+
+    const req = http.expectOne('assets/resume.yaml');
 
     req.flush(body);
   });
