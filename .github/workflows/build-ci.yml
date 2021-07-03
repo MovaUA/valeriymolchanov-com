@@ -24,6 +24,8 @@ jobs:
 
       - name: Setup Nodejs
         uses: actions/setup-node@v2
+        with:
+          node_version: "16.4.1"
 
       - name: Print Node.js version
         run: node -v
