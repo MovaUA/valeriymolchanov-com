@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^12.1.1",
+    "@angular-devkit/build-webpack": "^0.1201.1",
     "@angular-eslint/eslint-plugin": "~12.0.0",
     "@angular-eslint/eslint-plugin-template": "~12.0.0",
     "@angular-eslint/template-parser": "~12.0.0",
