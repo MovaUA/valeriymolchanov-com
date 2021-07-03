@@ -1,0 +1,187 @@
+name: Valeriy
+surname: Molchanov
+titles:
+  - DevOps CI/CD Engineer
+  - Kubernetes/System/Application Architect
+location: Kyiv, Ukraine
+phone: +380502345160
+profile:
+  - I fell in love with coding back in my childhood.
+  - Almost my entire professional carrier, for more than 15 years, I write different types of applications with C#. Then I discovered a whole new world of Kubernetes and DevOps, that was a great pleasure to master such complex technologies.
+  - My constant desire to dig deeper opened me GO, which amazed me with its simplicity, speed, and powerful concurrency model, thus in my spare time, I code and experiment with this beautiful language together with my son.
+  - Mostly I do back-end stuff, which you can not see except for the logs and metrics, and the other day I wanted to see and touch what I do, so I learned Angular, TypeScript, Ngrx, and Nodejs.
+personal:
+  address: Marshala Malynovs'koho St, 8 Kyiv 02000, Kyiv, 04212
+  birth:
+    date: 7 May 1977
+    location: Murmask, Russia
+  nationality: Ukrainian
+  drivingLicense: B
+  hobbies:
+    - Sport
+    - Traveling
+    - New languages
+    - New technologies
+socialProfile:
+  - name: Home page
+    url: https://valeriymolchanov.com
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/valeriy-molchanov-445234175/
+  - name: GitHub
+    url: https://github.com/MovaUA
+languages:
+  - language: English
+    level: 90
+  - language: Ukrainian
+    level: 100
+  - language: Russian
+    level: 100
+skills:
+  - skill: C#
+    level: 100
+  - skill: Kubernetes
+    level: 100
+  - skill: Docker
+    level: 100
+  - skill: Helm
+    level: 100
+  - skill: Azure DevOps Pipelines
+    level: 100
+  - skill: Bash
+    level: 99
+  - skill: Golang
+    level: 90
+  - skill: GitHub Actions
+    level: 80
+  - skill: Tekton Pipelines
+    level: 80
+work:
+  - title: Senior DevOps/Software Engineer
+    date:
+      start: 28 February 2006
+      end: null
+    company: DebriefingSoftware A/S
+    location: Kyiv, Ukraine
+    roles:
+      - title: Back-end development of distributed enterprise system
+        responsibilities:
+          - CI/CD pipelines with Team Foundation Server, DSC, PowerShell
+          - IBM DB2 database design of tables/views/store procedures
+          - Back-end web-services .NET Framework, WCF, C#
+          - Unit/integration/E2E Nunit tests
+          - Client-side Windows services with .NET Framework, C#
+          - Client-side apps for configuring/managing Windows services Windows Forms and WPF, C#
+      - title: Design and development of various parts of new micro-services architecture system in on-premise Kubernetes
+        responsibilities:
+          - Azure DevOps CI/CD Pipelines + Bash scripts
+          - Docker images + Helm charts for Kubernetes cluster
+          - Zero-downtime deployment of services into Kubernetes cluster
+          - Design and implementation of the multi-environment system (environments for individual developers/tests/staging/production)
+          - Design and implementation of artifacts retention policy for Azure Container Registry
+          - Implementation of various parts of event-driven back-end services with .NET 5, C#, integration with RabbitMQ
+          - Implementation of various parts of GRPC and REST API web-services with .NET 5, C#
+          - Implementation of zero-downtime Blue/Green deployment for RabbitMQ
+          - Design and implementation of database migrations for MongoDB and PostgreSQL
+  - title: Store warehouse manager
+    date:
+      start: 2002
+      end: 2006
+    company: Palmira LTD
+    location: Odessa, Ukraine
+    roles:
+      - title: Order application developer
+        responsibilities:
+          - Wrote an application for Microsoft Excel with VBA (Visual Basic for Applications) for making sales forecasts and goods orders to suppliers
+  - title: Store warehouse manager
+    date:
+      start: 1999
+      end: 2002
+    company: Grey LTD
+    location: Sevastopol, Ukraine
+    roles:
+      - title: Order application developer
+        responsibilities:
+          - Wrote an application for Microsoft Excel with VBA for making sales forecasts and goods orders to suppliers
+education:
+  - school: Sevastopol National Technical University
+    degree: Radioelectronics Specialist
+    date:
+      start: 1994
+      end: 1999
+    city: Sevastopol, Ukraine
+    description:
+      - Obtained Diploma with Honours of Radio Engineer at the Department of Radioelectronics
+  - school: Sevastopol National Technical University
+    degree: null
+    date:
+      start: 1999
+      end: 2001
+    city: Sevastopol, Ukraine
+    description:
+      - Attended PhD studies at the specialty of High Frequency Microwave and Antenna Devices
+courses:
+  - title: Docker (self-taught)
+    date:
+      start: 2017
+      end: null
+    url: https://docs.docker.com
+  - title: Kubernetes (self-taught)
+    date:
+      start: 2018
+      end: null
+    url: https://kubernetes.io/docs
+  - title: Helm (self-taught)
+    date:
+      start: 2018
+      end: null
+    url: https://helm.sh/docs
+  - title: Azure DevOps Pipelines
+    date:
+      start: 2019
+      end: null
+    url: https://docs.microsoft.com/en-us/azure/devops/pipelines
+  - title: GO (aka golang, self-taught)
+    date:
+      start: 2018
+      end: null
+    url: https://golang.org
+  - title: Gophercises (GO courses)
+    date:
+      start: May 2019
+      end: December 2020
+    url: https://gophercises.com
+  - title: JavaScript Basics/DOM/MasterClass
+    date:
+      start: October 2018
+      end: October 2018
+    url: https://ultimatecourses.com
+  - title: TypeScript Basics/MasterClass
+    date:
+      start: November 2018
+      end: November 2018
+    url: https://ultimatecourses.com
+  - title: Angular Fundamentals/Pro
+    date:
+      start: December 2018
+      end: December 2018
+    url: https://ultimatecourses.com
+  - title: NGRX Store+Effects
+    date:
+      start: January 2019
+      end: January 2019
+    url: https://ultimatecourses.com
+  - title: The Node.js Master Class
+    date:
+      start: February 2019
+      end: February 2019
+    url: https://www.pirple.com
+  - title: Tekton (self-taught)
+    date:
+      start: May 2019
+      end: null
+    url: https://tekton.dev
+  - title: Rust (self-taught)
+    date:
+      start: June 2019
+      end: August 2019
+    url: https://www.rust-lang.org
