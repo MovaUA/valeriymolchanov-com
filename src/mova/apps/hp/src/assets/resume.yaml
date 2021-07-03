@@ -22,7 +22,7 @@ personal:
     - Traveling
     - New languages
     - New technologies
-socialProfile:
+socialProfiles:
   - name: Home page
     url: https://valeriymolchanov.com
   - name: LinkedIn
@@ -55,7 +55,7 @@ skills:
     level: 80
   - skill: Tekton Pipelines
     level: 80
-work:
+works:
   - title: Senior DevOps/Software Engineer
     date:
       start: 28 February 2006
@@ -66,7 +66,7 @@ work:
       - title: Back-end development of distributed enterprise system
         responsibilities:
           - CI/CD pipelines with Team Foundation Server, DSC, PowerShell
-          - IBM DB2 database design of tables/views/store procedures
+          - IBM DB2 database design of tables/views/stored procedures
           - Back-end web-services .NET Framework, WCF, C#
           - Unit/integration/E2E Nunit tests
           - Client-side Windows services with .NET Framework, C#
@@ -102,7 +102,7 @@ work:
       - title: Order application developer
         responsibilities:
           - Wrote an application for Microsoft Excel with VBA for making sales forecasts and goods orders to suppliers
-education:
+educations:
   - school: Sevastopol National Technical University
     degree: Radioelectronics Specialist
     date:
