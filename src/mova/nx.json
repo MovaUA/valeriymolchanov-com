@@ -7,7 +7,7 @@
     ".eslintrc.json": "*"
   },
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "npmScope": "mova",
   "tasksRunnerOptions": {
@@ -20,7 +20,6 @@
           "test",
           "e2e"
         ],
-        "accessToken": "ZTE4MzQwNDQtOTZhNC00OWQ3LWJkM2UtNTM4YjZiMzA2ZWY3fHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
@@ -36,5 +35,13 @@
         "hp"
       ]
     }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }

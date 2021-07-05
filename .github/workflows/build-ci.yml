@@ -24,9 +24,17 @@ jobs:
 
       - name: Setup Nodejs
         uses: actions/setup-node@v2
+        with:
+          node-version: "16.4.1"
+
+      - name: Print Node.js version
+        run: node -v
+
+      - name: Print npm version
+        run: npm -v
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build --prod
