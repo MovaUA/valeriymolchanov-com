@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Resume } from './resume';
 import { map, shareReplay } from 'rxjs/operators';
 import { load as yamlLoad } from 'js-yaml';
+import { Resume } from './resume.models';
 
 @Injectable({
   providedIn: 'root',
