@@ -4,7 +4,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { NavModule } from './features/nav/nav.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -14,7 +13,6 @@ describe('AppComponent', () => {
         RouterTestingModule.withRoutes([]),
         BrowserModule,
         BrowserAnimationsModule,
-        NavModule,
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }).compileComponents();
